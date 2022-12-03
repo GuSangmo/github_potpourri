@@ -19,3 +19,19 @@ jobs:
         run: pwd
       - name: List files
         run: ls -al
+
+  checkout_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout example
+        uses: actions/checkout@v3
+        with:
+          path: example_path
+          repository: actions/checkout
+          ref: v3
+
+      - run: ls
+      - run: echo 'checking files list...'
+
+      - run: ls -al
+      - run: cat .github/workflows/first.yml
