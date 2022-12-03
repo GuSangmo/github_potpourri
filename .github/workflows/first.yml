@@ -9,4 +9,13 @@ jobs:
   echo_job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, girhub actions!"
+      - run: echo 'Hello, girhub actions!'
+
+  pwd_ls_job:
+    name: PWD & LS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print working directory
+        run: pwd
+      - name: List files
+        run: ls -al
