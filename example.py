@@ -1,7 +1,7 @@
 THRESHOLD = 100
 
 
-class wrong_camel_case:
+class OldClass:
     def __init__(self):
         pass
 
